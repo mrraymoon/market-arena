@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "near-sdk-as": "^3.2.3"
   }
 }

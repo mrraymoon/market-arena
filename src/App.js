@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, Main, New, Traders } from "./components";
 import Cover from "./components/Cover";
 import { login, logout as destroy, accountBalance } from "./utils/near";
