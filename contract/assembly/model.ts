@@ -30,19 +30,26 @@ export class Item {
   }
 
   /**
-   * update item state to sold
+   * @dev update item state to sold and transfer ownership to new owner
    */
-  public toggleSold(): void {
+  public buyItem(): void {
     this.sold = true;
-  }
-
-  public updateOwner(): void {
     this.owner = context.sender;
   }
+
+  /**
+   * @dev puts an item back on sale
+   * @param newPrice new price of item
+   */
+  public reSellItem(newPrice:u128): void {
+    this.price = newPrice;
+    this.sold = false;
+  }
+
 }
 
 /**
- * class contains properties each trader exibit
+ * class contains properties each trader exibits
  * {@link nearBindgen} - a decorator that makes this class serializable so it can be persisted on the blockchain
  */
 @nearBindgen
@@ -60,20 +67,14 @@ export class Trader {
     return trader;
   }
 
-  public addToRating(rating: u32): void {
+  public addRating(rating: u32): void {
     this.rating = this.rating + rating;
-  }
-
-  public increaseRateCount(): void {
     this.rateCount = this.rateCount + 1;
+    this.raters.push(context.sender);
   }
 
   public increaseSoldCount(): void {
     this.soldCount = this.soldCount + 1;
-  }
-
-  public addRater(): void {
-    this.raters.push(context.sender);
   }
 }
 
@@ -81,4 +82,3 @@ export const items = new PersistentUnorderedMap<u32, Item>("items");
 
 export const traders = new PersistentUnorderedMap<string, Trader>("traders");
 
-export const isTrader = new PersistentUnorderedMap<string, bool>("istrader");
