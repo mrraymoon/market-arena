@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/market-arena/static/css/main.cbec73e1.chunk.css",
+    "main.js": "/market-arena/static/js/main.e1adf329.chunk.js",
+    "main.js.map": "/market-arena/static/js/main.e1adf329.chunk.js.map",
+    "runtime-main.js": "/market-arena/static/js/runtime-main.a95eaf26.js",
+    "runtime-main.js.map": "/market-arena/static/js/runtime-main.a95eaf26.js.map",
+    "static/css/2.984f751f.chunk.css": "/market-arena/static/css/2.984f751f.chunk.css",
+    "static/js/2.4b119011.chunk.js": "/market-arena/static/js/2.4b119011.chunk.js",
+    "static/js/2.4b119011.chunk.js.map": "/market-arena/static/js/2.4b119011.chunk.js.map",
+    "index.html": "/market-arena/index.html",
+    "static/css/2.984f751f.chunk.css.map": "/market-arena/static/css/2.984f751f.chunk.css.map",
+    "static/css/main.cbec73e1.chunk.css.map": "/market-arena/static/css/main.cbec73e1.chunk.css.map",
+    "static/js/2.4b119011.chunk.js.LICENSE.txt": "/market-arena/static/js/2.4b119011.chunk.js.LICENSE.txt",
+    "static/media/market-img.62c5f507.jpg": "/market-arena/static/media/market-img.62c5f507.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a95eaf26.js",
+    "static/css/2.984f751f.chunk.css",
+    "static/js/2.4b119011.chunk.js",
+    "static/css/main.cbec73e1.chunk.css",
+    "static/js/main.e1adf329.chunk.js"
+  ]
+}
