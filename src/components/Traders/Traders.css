@@ -1,0 +1,51 @@
+.traders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.traders-heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.traders-subheading {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 120px;
+}
+
+.trader-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+}
+
+.trader {
+  border-radius: 5px;
+  border: 1px solid yellow;
+  width: 500px;
+  height: 50px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 80px;
+}
+
+.rate-button {
+  background-color: green;
+  color: white;
+}
+
+.rate-input {
+  width: 40px;
+  text-align: center;
+}
