@@ -1,3 +1,12 @@
+# Market Arena 
+
+Market Arena is a dapp that can help users upload their items available for sale on a market arena and other users can also come to purchase these items paying using near tokens. In addition, users can also rate a trader(only once) based on their experience so other buyers can get to know the legibility of that trader.
+
+- Project link https://mrraymoon.github.io/market-arena/
+
+
+
+---
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
