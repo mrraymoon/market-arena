@@ -4,7 +4,6 @@ import { Trader, Item, items, traders, isTrader } from "./model";
 /**
  * create a new item object
  * @param itemLoad object containing item properties
- *
  */
 export function createItem(itemLoad: Item): void {
   let _key = items.length;
@@ -49,7 +48,6 @@ export function rateTrader(traderId: string, rating: u32): void {
 }
 
 /**
- *
  * @param itemKey used to get item from mapping
  */
 export function buyItem(itemKey: u32): void {
@@ -75,7 +73,6 @@ export function buyItem(itemKey: u32): void {
 }
 
 /**
- *
  * @param itemKey used to get item from mapping
  * @returns an item object
  */
@@ -85,7 +82,6 @@ export function getItem(itemKey: u32): Item | null {
 }
 
 /**
- *
  * @param traderId unique id of trader to query for
  * @returns details about a trader
  */
@@ -95,7 +91,6 @@ export function getTrader(traderId: string): Trader | null {
 }
 
 /**
- *
  * @returns ids of all traders in market
  */
 export function getAllTraders(): String[] {
