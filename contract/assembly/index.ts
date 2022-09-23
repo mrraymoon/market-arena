@@ -42,8 +42,6 @@ export function createItem(itemLoad: Item): void {
     // initialize trader default properties
     let newTrader = new Trader();
     traders.set(context.sender, newTrader.initializeValues());
-    // complete traders registration
-    isTrader.set(context.sender, true); // TODO: Remove this line as it will later become redundant
   }
 }
 
@@ -74,7 +72,7 @@ export function buyItem(itemKey: u32): void {
 
 /**
  * @param itemKey used to get item from mapping
- * @returns an item object
+ * @returns an item Object
  */
 export function getItem(itemKey: u32): Item | null {
   const item = items.get(itemKey);
