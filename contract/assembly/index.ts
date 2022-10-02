@@ -88,6 +88,11 @@ export function getTrader(traderId: string): Trader | null {
   return trader;
 }
 
+export function getAllItems(): Item[] {
+  return items.values();
+}
+
+
 /**
  * @returns ids of all traders in market
  */
@@ -95,6 +100,3 @@ export function getAllTraders(): String[] {
   return traders.keys();
 }
 
-export function getAllItems(): Item[] {
-  return items.values();
-}
