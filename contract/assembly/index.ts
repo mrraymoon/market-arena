@@ -88,6 +88,10 @@ export function getTrader(traderId: string): Trader | null {
   return trader;
 }
 
+/**
+ * 
+ * @returns All items stored in the contract
+ */
 export function getAllItems(): Item[] {
   return items.values();
 }
