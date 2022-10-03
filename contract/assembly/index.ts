@@ -1,6 +1,23 @@
 import { context, ContractPromiseBatch, logging } from "near-sdk-as";
 import { Trader, Item, items, traders, isTrader } from "./model";
 
+/**
+ * create a new item object
+ * @param itemLoad object containing item properties
+ */
+export function createItem(itemLoad: Item): void {
+  let _key = items.length;
+  // Add new item to storage
+  items.set(_key, Item.initializeValues(itemLoad));
+  const senderIsTrader = traders.contains(context.sender);
+  // Register sender if they are not yet registered as a trader
+  if (!senderIsTrader) {
+    // initialize trader default properties
+    let newTrader = new Trader();
+    traders.set(context.sender, newTrader.initializeValues());
+  }
+}
+
 /*
  * @param traderId trader unique identifier
  * @param rating value to add to trader rating (1-5)
@@ -28,22 +45,7 @@ export function rateTrader(traderId: string, rating: u32): void {
   }
 }
 
-/**
- * create a new item object
- * @param itemLoad object containing item properties
- */
-export function createItem(itemLoad: Item): void {
-  let _key = items.length;
-  // Add new item to storage
-  items.set(_key, Item.initializeValues(itemLoad));
-  const senderIsTrader = traders.contains(context.sender);
-  // Register sender if they are not yet registered as a trader
-  if (!senderIsTrader) {
-    // initialize trader default properties
-    let newTrader = new Trader();
-    traders.set(context.sender, newTrader.initializeValues());
-  }
-}
+
 
 /**
  * @param itemKey used to get item from mapping
