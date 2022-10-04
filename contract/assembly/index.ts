@@ -106,3 +106,28 @@ export function getAllTraders(): String[] {
   return traders.keys();
 }
 
+/*
+ * @param traderId trader unique identifier
+ * @param rating value to add to trader rating (1-5)
+ */
+export function scoreTrader(traderId: string, rating: u32): void {
+  const trader = traders.get(traderId);
+  if (trader) {
+    // proceed to score trader
+    const hasRate = trader.raters.includes(context.sender);
+    if (!hasRate) {
+      logging.log("Proceeding to score trader");
+      trader.addToRating(rating);
+      logging.log("After 'addToRating'");
+      trader.increaseRateCount();
+      logging.log("After 'increaseRateCount'");
+      trader.addRater();
+      logging.log("After 'addRater'");
+      traders.set(traderId, trader);
+    } else {
+      logging.log("Trader already scored");
+    }
+  } else {
+    throw new Error("Trader does not exist");
+  }
+}
