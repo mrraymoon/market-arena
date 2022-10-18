@@ -30,17 +30,17 @@ export class Item {
   }
 
   /**
-   * update item state to sold
-   */
-  public toggleSold(): void {
-    this.sold = true;
-  }
-
-  /**
    * Set the owner variable
    */
   public updateOwner(): void {
     this.owner = context.sender;
+  }
+  
+  /**
+   * update item state to sold
+   */
+  public toggleSold(): void {
+    this.sold = true;
   }
 }
 
