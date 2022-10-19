@@ -36,6 +36,9 @@ export class Item {
     this.sold = true;
   }
 
+  /**
+   * Set the owner variable
+   */
   public updateOwner(): void {
     this.owner = context.sender;
   }
