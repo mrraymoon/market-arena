@@ -67,16 +67,16 @@ export class Trader {
     this.rating = this.rating + rating;
   }
 
+  public addRater(): void {
+    this.raters.push(context.sender);
+  }
+
   public increaseRateCount(): void {
     this.rateCount = this.rateCount + 1;
   }
 
   public increaseSoldCount(): void {
     this.soldCount = this.soldCount + 1;
-  }
-
-  public addRater(): void {
-    this.raters.push(context.sender);
   }
 }
 
